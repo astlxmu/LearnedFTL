@@ -1,0 +1,35 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build-femu/x86_64-softmmu/qemu-system-x86_64",  // Full path to program executable.
+            "args": [
+                "-name","\"FEMU-BBSSD-VM\"","-enable-kvm","-cpu","host","-smp","4","-m","4G","-device","virtio-scsi-pci,id=scsi0","-device","scsi-hd,drive=hd0",
+                "-drive","file=/home/lzh/femu/images/u20s.qcow2,if=none,aio=native,cache=none,format=qcow2,id=hd0","-device","femu,devsz_mb=30720,femu_mode=1","-net","user,hostfwd=tcp::8081-:22",
+                "-net","nic,model=virtio","-nographic","-qmp","unix:./qmp-sock,server,nowait","2>&1"
+            ],  // Command line arguments passed to the program.
+            "stopAtEntry": true,   // Optional parameter. If true, the debugger should stop at the entrypoint of the target.
+                                   // If processId is passed, has no effect.
+            "cwd": "${workspaceFolder}/build-femu",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "${workspaceFolder}/gdb",
+            // "preLaunchTask": "shell" // Task to run before debug session starts.
+        }
+    ]
+}
