@@ -91,3 +91,16 @@ After startup, you can see the /dev/nvme0n1 device throughs ```sudo nvme list```
 ### Change FTL
 
 If you want to try other ftl, modify `bbssd/**ftl.c` in `hw/femu/meson.build` to the required `ftl.c` file, and modify the referenced header file in the `hw/femu/bbssd/bb.c` accordingly.
+
+---
+
+This project implements DFTL, TPFTL, LeaFTL, and LearnedFTL algorithms on [FEMU](https://github.com/vtess/FEMU) in black-box mode. If you use this implementation for research purposes, please cite the sources.
+
+Bibtex
+```bibtex
+@article{LearnedFTL,
+Author = {Wang, Shengzhe and Lin, Zihang},
+Title = {LearnedFTL},
+Url = {https://github.com/astlxmu/LearnedFTL},
+Year = 2023}
+```
