@@ -1,3 +1,18 @@
+/**
+ * Filename: leaftl.c
+ * Author: Shengzhe Wang
+ * Date Created: 2023-05
+ * Version: 1.0
+ *
+ * Brief Description:
+ *     This file implementing the main function of LeaFTL (ASPLOS' 23).
+ *
+ * Copyright Notice:
+ *     Copyright (C) 2023 Shengzhe Wang. All rights reserved.
+ *     License: Distributed under the GPL License.
+ *
+ */
+
 // #pragma GCC push_options
 // #pragma GCC optimize(0)
 

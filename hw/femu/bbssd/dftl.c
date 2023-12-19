@@ -1,3 +1,18 @@
+/**
+ * Filename: dftl.c
+ * Author: Zihang Lin
+ * Date Created: 2022-05
+ * Version: 1.0
+ *
+ * Brief Description:
+ *     This file implementing the main function of DFTL (ASPLOS' 09).
+ *
+ * Copyright Notice:
+ *     Copyright (C) 2023 Zihang Lin. All rights reserved.
+ *     License: Distributed under the GPL License.
+ *
+ */
+
 #include "dftl.h"
 
 //#define FEMU_DEBUG_FTL

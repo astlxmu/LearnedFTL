@@ -1,9 +1,23 @@
+/**
+ * Filename: ld-tpftl.c
+ * Author: Shengzhe Wang
+ * Date Created: 2022-05
+ * Version: 1.0
+ *
+ * Brief Description:
+ *     This file implementing the main function of LearnedFTL (HPCA' 24).
+ *
+ * Copyright Notice:
+ *     Copyright (C) 2023 Shengzhe Wang. All rights reserved.
+ *     License: Distributed under the GPL License.
+ *
+ */
+
 // #pragma GCC push_options
 // #pragma GCC optimize(0)
 
 #include "ld-tpftl.h"
 #include "util.h"
-
 
 // static int hit_num = 0;
 // static int gc_num = 0;
