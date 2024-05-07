@@ -499,7 +499,7 @@ static void ssd_init_params(struct ssdparams *spp)
     spp->gc_thres_lines_high = (int)((1 - spp->gc_thres_pcent_high) * spp->tt_lines);
     spp->enable_gc_delay = true;
 
-    spp->ents_per_pg = 512;
+    spp->ents_per_pg = 256;
     spp->tt_gtd_size = spp->tt_pgs / spp->ents_per_pg;
     // spp->tt_cmt_size = spp->tt_blks / 2;
     spp->tt_cmt_size = 8192;
