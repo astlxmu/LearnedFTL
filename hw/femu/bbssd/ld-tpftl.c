@@ -2348,12 +2348,12 @@ static void model_training(struct ssd *ssd, struct write_pointer *wpp, uint64_t 
                             // if (ssd->lr_nodes[start_gtd+i].bitmap[tmp_loc] == 1) {
                             //     already_one++;
                             // }
-                            ssd->bitmaps[start_train_lpn + start + tmp_loc] = 1;
+                            ssd->bitmaps[start_train_lpn + segment_train_lpns[ii]] = 1;
                             // ssd->lr_nodes[start_gtd+i].bitmap[tmp_loc] = 1;
                             
                         } else {
                             // ssd->lr_nodes[start_gtd+i].bitmap[tmp_loc] = 0;
-                            ssd->bitmaps[start_train_lpn + start + tmp_loc] = 0;
+                            ssd->bitmaps[start_train_lpn + segment_train_lpns[ii]] = 0;
                         }
                     }
                 }
